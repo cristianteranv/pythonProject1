@@ -34,5 +34,6 @@ def test_calculator_multiply_static(clear_history_fixture):
 def test_calculator_subtract():
     """Testing the subtract method of the calculator"""
     calc = Calculator()
-    calc.subtract_number(1)
-    assert calc.get_result() == -1
+    tup = (1.0,2.0)
+    calc.subtract_numbers(tup)
+    assert calc.get_last_result_value() == -3
