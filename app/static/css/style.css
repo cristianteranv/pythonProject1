@@ -1,0 +1,60 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.5rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: gray;
+    color: white;
+    font-size: 30px;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-weight: bold;
+    border-bottom: 1px dashed black;
+}
+
+h2 {
+    text-align: center;
+    padding-left: 35px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.form-control{
+    width: 20%;
+}
+
+p {
+    text-align: center;
+    padding-left: 20px;
+    font-size: large;
+}
+
+.center {
+    padding: 50px 0 50px;
+}

@@ -1,5 +1,6 @@
-import pandas as pd
+"""Starter code for csv file handling"""
 import datetime
+import pandas as pd
 
 if __name__ == '__main__':
     print("hello")
