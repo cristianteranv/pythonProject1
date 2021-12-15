@@ -3,6 +3,7 @@ from calculator.calculations.calculation import Calculation
 
 class Addition(Calculation):
     """ calculation addition class"""
+    # pylint: disable=super-init-not-called
     def __init__(self, values):
         self.operation = "Addition"
         self.values = Calculation.convert_args_to_tuple_of_float(values)

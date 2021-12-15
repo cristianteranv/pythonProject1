@@ -10,6 +10,7 @@ class Calculations:
     # pylint: disable=too-few-public-methods
     @staticmethod
     def get_history():
+        """history"""
         return Calculations.history
 
     @staticmethod

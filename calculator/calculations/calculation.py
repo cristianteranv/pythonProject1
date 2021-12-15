@@ -19,6 +19,8 @@ class Calculation:
             list_values_float.append(float(item))
         return tuple(list_values_float)
 
+    # pylint: disable=unnecessary-pass
     @staticmethod
     def get_result():
+        """abstract"""
         pass
