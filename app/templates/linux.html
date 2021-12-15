@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>
+    Learning the Basics of Linux Commands
+</h1>
+
+<h2>
+    What are Linux Commands?
+</h2>
+
+<div class="center">
+    <p>
+        "The Linux command line is a text interface to your computer. Often referred to as the shell, terminal, console, prompt or various other names,
+        it can give the appearance of being complex and confusing to use."
+        <a href="https://ubuntu.com/tutorials/command-line-for-beginners#1-overview">(ubuntu.com)</a>
+    </p>
+</div>
+<h2>
+    Getting Started
+</h2>
+<div class="center">
+    <p>
+        To use linux commands you would have to open your Command Prompt or Powershell.
+    </p>
+    <p>
+        To get started you would want to see the current directory you are in using <b>pwd</b> and after you would want to go to the directory you want to be at.
+        For now we will go to the desktop by doing <b>cd /Desktop</b> and creating a new directory by <b>mkdir test</b>. Then going into that new directory by
+        <b>cd /test</b> and to check that you are, we can use again the command <b>pwd</b>. We can now create a file by using <b>touch text.txt</b> and remove that file
+        by using the command <b>rm text.txt</b> and that is the basics of linux commands.
+    </p>
+    <h2>
+        Linux Commands
+    </h2>
+
+    <p>
+        pwd - Present Working Directory - allows you to see where you are at <br>
+
+        cd - change directory - allows you to move from the current directory <br>
+
+        ls - view the content of the current directory <br>
+
+        mv - allows you to move files or rename files <br>
+
+        mkdir - allows you to create a new directory(folder)  <br>
+
+        rmdir - allows you to delete directories (only if directory is empty) <br>
+
+        rm - allows you to delete directories and the contents, if you wish to delete it entirely use -r  <br>
+
+        touch - allows you to create a blank new file  <br>
+        <br><br><br><br><br><br><br><br><br><br>
+    </p>
+</div>
+{%endblock%}

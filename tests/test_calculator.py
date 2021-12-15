@@ -12,13 +12,13 @@ def test_calculator_add_static(clear_history_fixture):
     """testing that our calculator has a static method for addition"""
     # pylint: disable=unused-argument,redefined-outer-name
     my_tuple = (1.0,2.0,5.0)
-    Calculator.add_numbers(my_tuple)
+    Calculator.addition(my_tuple)
     assert Calculator.get_last_result_value() == 8.0
 def test_calculator_subtract_static(clear_history_fixture):
     """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
     my_tuple = (1.0,2.0,3.0)
-    Calculator.subtract_numbers(my_tuple)
+    Calculator.subtraction(my_tuple)
     assert Calculator.get_last_result_value() == -6.0
 
 def test_calculator_multiply_static(clear_history_fixture):
@@ -26,12 +26,12 @@ def test_calculator_multiply_static(clear_history_fixture):
     # pylint: disable=unused-argument,redefined-outer-name
     #using Tuple instead of args because we can pack as much data as we need into the tuple
     my_tuple = (1.0,2.0,3.0)
-    Calculator.multiply_numbers(my_tuple)
+    Calculator.multiplication(my_tuple)
     assert Calculator.get_last_result_value() == 6.0
 
 def test_calculator_subtract():
     """Testing the subtract method of the calculator"""
     calc = Calculator()
     tup = (1.0,2.0)
-    calc.subtract_numbers(tup)
+    calc.subtraction(tup)
     assert calc.get_last_result_value() == -3

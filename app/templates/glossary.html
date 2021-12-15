@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>Glossary of Object Oriented Programming Terms</h1>
+<div class="center">
+    <p>
+        <b>Class</b> - The code describing a particular entity in the application, such as Customer, Order, or Address. The class contains the code defining the properties and methods.</br>
+        <b>Object</b> - An instance of a class that is created at runtime.</br>
+        <b>Namespace</b> - A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries.</br>
+        <b>Constructor</b> - Code that is executed each time an instance of the class is created.</br>
+        <b>Type hint</b> - Type hinting is a formal solution to statically indicate the type of a value within your code.</br>
+        <b>Type cast</b> - Typecast is a way of changing an object from one data type to another data type.</br>
+        <b>Static</b> - Keyword denoting that the variable or method marked as such is available at the class level. In other words, you don't need to create an instance of the class to access it </br>
+        <b>Unit test</b> -  A unit test is an automated piece of code that invokes a unit of code in the program and then checks that it is performing its work as expected</br>
+        <b>Design Pattern</b> - It's a general repeatable solution to a commonly occurring problem in software design. It is a description or template for how to solve a problem that can be used in many different situations.</br>
+        <b>Method</b> - The code defining the actions or behaviors of the class.</br>
+        <b>Factory</b> - In object-oriented programming (OOP), a factory is an object for creating other objects. Formally a factory is a function or method that returns objects of a varying prototype or class. </br>
+        <b>Instantiation</b> - To create an instance of a class by making an object of said class. </br>
+        <b>Fixture</b> - A test fixture is a well known and fixed environment in which tests are run so that results are repeatable.</br>
+        <b>Property</b> - The code defining the data managed by the class.</br>
+    </p>
+</div>
+{%endblock%}

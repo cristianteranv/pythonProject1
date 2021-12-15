@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>
+    Learning the Basics of AAA Testing
+</h1>
+<h2>
+    What is AAA Testing?
+</h2>
+<div class="center">
+    <p>
+        AAA Testing stands for Arrange-Act-Assert. We test code by running units of code in order to determine if the code functions as expected.
+        There are several kinds of tests and AAA testing is one of the simplest and most powerful testing patterns.
+    </p>
+    <p>
+        Arrange-Act-Assert is a way to structure test cases. It prescribes an order of operations:
+    </p>
+    <p>
+        <b>Arrange</b> inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.
+    </p>
+    <p>
+        <b>Act</b> on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior.
+    </p>
+    <p>
+        <b>Assert</b> expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+    </p>
+    <p>
+        As a note, Behavior-Driven Development follows the Arrange-Act-Assert pattern by another name: Given-When-Then.
+    </p>
+</div>
+{%endblock%}

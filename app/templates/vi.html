@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>
+    Learning the Basics of Vi
+</h1>
+
+<h2>
+    What is Vi?
+</h2>
+
+<div class="center">
+    <p>
+        Vi is a visual text editor included by default on Unix operating systems. It is a character based screen editory without GUI. One of Vi's
+        major draws is its ubiquity and accessibility. You do not need to have a desktop environment to have a desktop environment to use it, and it is
+        typically already installed on your system."
+        <a href="https://www.linode.com/docs/guides/what-is-vi/">(linode.com)</a>
+    </p>
+</div>
+
+<h2>
+    Getting Started
+</h2>
+<div class="center">
+    <p>
+        To use Vi you would have to open your Command Prompt or Powershell.
+    </p>
+
+    <p>
+        To get started using Vi you would have to be in the directory that the file you want to edit is in. You would then using the command <b>Vi (Filename)</b>
+        to go into that file and be able to add text to that file by going into insert mode by <b>shift key + colon</b> and in that command prompt add <b>W</b>.
+        After you are done to quit, you would press
+        <b>Shift key + colon</b> to go into the command prompt of Vi again and add <B>Q</B> or to get out of Vi all together use <b>WQ</b>.
+    </p>
+
+</div>
+
+
+<h2>
+    Commands on Vi
+</h2>
+<div class="center">
+    <p>
+        Vi (Filename) -lets you edit the file texts <br>
+
+        Vi (Filename)< - lets you replace the filename <br>
+
+        <br> <i>Listed Below Will be the Vi Commands</i> <br>
+
+        I - lets you go into insert mode <br>
+
+        Escape - get out of insert mode <br>
+
+        Shift key + colon - command prompt for vi <br>
+
+        W - command to write <br>
+
+        Q - command to quit <br>
+
+        WQ - Write and Quit  <br><br><br><br><br><br><br><br><br><br>
+    </p>
+</div>
+{%endblock%}

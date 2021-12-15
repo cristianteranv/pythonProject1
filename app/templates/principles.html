@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>Learning the four principles of OOP</h1>
+
+<h2>
+    What is OOP?
+</h2>
+<div class="center">
+    <p>
+        OOP stands for Object Oriented Programming.
+        It is one of the most popular approaches to solve a programming problem
+        as it makes it easier to represent real life things in code, as Objects.
+    </p>
+    <p>
+        <b>Class - </b>To make objects we first need to define them, we use a Class for this.
+        A class is a blueprint for the object. We can think of a class as a sketch of an Object.
+        It contains all of the object details, such as the information about the object known as the class attributes,
+        and the behavior of the object known as the class methods.
+    </p>
+    <p>
+        <b>Objects - </b>Once we have a blueprint for an object, we can create the object itself also known as making an instance of the class.
+    </p>
+    <p>
+        <b>Methods - </b>Methods are functions defined inside the body of a class. They are used to define the behaviors of an object.
+    </p>
+    <p>
+        Along with the building blocks of OOP, such as the Class, Objects and Methods already referred to, OOP has four important principles
+    </p>
+</div>
+<h2>
+    Inheritance
+</h2>
+<div class="center">
+    <p>
+        Inheritance is a way of creating a new class by using the details already defined of an existing class.
+        The new class is called the child class, while the class that was used as a base is called a parent class or a base class.
+    </p>
+</div>
+<h2>
+    Encapsulation
+</h2>
+<div class="center">
+    <p>
+        Encapsulation is the idea of keeping the data of a class to itself and only allowing methods to interact with the class data.
+        This is done by restricting access to the class' methods and variables which prevents data from direct modification.
+    </p>
+</div>
+<h2>
+    Polymorphism
+</h2>
+<div class="center">
+    <p>
+        Polymorphism is the ability to use a common interface for multiple classes (data types). This can be explained as
+        an object acting as more than a single class depending on the actions (functions, usage, methods) used on the object.
+        For example, if Class B is a child class of Class A, an we have an instance C of class B, we can
+        both, a function that works only with Class A, and a function that only works with Class B, on C.
+        When doing this, C will act as the class that is needed for each function.
+    </p>
+</div>
+<h2>
+    Abstraction
+</h2>
+<div class="center">
+    <p>
+        Abstraction is the concept of object-oriented programming that “shows” only essential attributes and “hides” unnecessary information.
+        The main purpose of abstraction is hiding the unnecessary details from the users.
+        It helps in reducing programming complexity and efforts.
+    </p>
+</div>
+{%endblock%}

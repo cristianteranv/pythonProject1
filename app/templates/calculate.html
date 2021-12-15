@@ -5,16 +5,27 @@
 {% endblock %}
 {%block content%}
 
-    <h1>Calculator</h1>
-
-    <form action="/calculate" method="POST">
+    <h2>Calculator</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/calculate" method="POST" autocomplete="off">
         <div class="mb-3">
             <label for="value1" class="form-label">Value 1:</label><br>
-            <input class="form-control" type="text" id="value1" name="value1" value="1"><br>
+            <input class="form-control" type="text" id="value1" name="value1" required autocomplete="off"><br>
         </div>
         <div class="mb-3">
             <label class="form-label" for="value2">Value 2:</label><br>
-            <input class="form-control" type="text" id="value2" name="value2" value="2"><br>
+            <input class="form-control" type="text" id="value2" name="value2" required><br>
         </div>
         <fieldset class="form-group">
         <legend>Operation</legend>
@@ -30,8 +41,27 @@
             <input class="form-check-input" type="radio" name="operation" id="multiplication" value="multiplication">
             <label class="form-check-label" for="multiplication">multiplication</label>
           </div>
+            <div class="form-check-inline">
+            <input class="form-check-input" type="radio" name="operation" id="division" value="division">
+            <label class="form-check-label" for="division">division</label>
+          </div>
         </fieldset>
 
         <input type="submit" value="Submit"  class="btn btn-primary btn-sm">
     </form>
+
+    {% if result %}
+    <div>
+        <h2>Result</h2>
+        <strong>Value 1: </strong> {{ value1 }} <br>
+        <strong>Value 2: </strong> {{ value2 }} <br>
+        <strong>Operation: </strong> {{ operation }} <br>
+        <strong>Result: </strong> {{ result }} <br><br>
+    </div>
+    <br>
+    <div>
+        You can check your calculations history <a href="calculation_history">here.</a>
+    </div>
+    <br><br><br><br>
+    {% endif %}
 {% endblock %}
