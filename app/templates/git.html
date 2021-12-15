@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>
+    Learning the Basics of Git
+</h1>
+
+<h2>
+    What is Git?
+</h2>
+
+<div class="center">
+    <p>
+        Git is a free and open source distributed version control system designed to handle any size projects and work with others. <br>
+        But what is a version control system? A <b>version control system</b> "also known as source control, is the practice of tracking and managing changes to software code.
+        Version control systems are software tools that help  software teams manage changes to source code over time."
+        <a href="https://www.atlassian.com/git/tutorials/what-is-version-control">(Atlassian.com)</a>
+    </p>
+</div>
+
+<h2>
+    Getting Started
+</h2>
+<div class="center">
+    <p>
+        This link has details on how to install git in mutiple operating systems:
+        <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>
+    </p>
+    <p>
+        To start first create a folder and name it <i>"getting started"</i> and right click and choose the option
+        <i>Git Bash Here</i>. Then type in the command line: <b>git init</b> <br> which will allow you to add a local Git
+        repository to the project. Add a text file into the folder using the command <b>touch text.txt</b> and after use <b>git add text.txt</b> which will add files
+        to the staging area. To add everything in the folder use a period "." at the end of add.
+    </p>
+    <p>
+        Using the following command, we will commit the file we wanted to add by using: <b>git commit -m "Initial commit" </b><br>
+        The "-m" is to create a message and the quotation marks is where you add the message you want. Using the command <b>git status</b>
+        will help found out what files are being modified and what files were added to the staging area.
+    </p>
+    <p>
+        Go to <a href="https://github.com/">Github</a> and create an account. Afterwards you will want to "Create Repository" and name it "test".
+        Then you will see that github will give you a quick setup which will give you the https. Copy the https that is given and going back to git bash
+        we will use the command <b>git remote add origin (url)</b> which will allow your local repository to be a remote repository. Now we can finally push
+        the files onto github by using the command <b>git push -u origin master</b> which you can now go on github and go to the repository you created to see that
+        the file was added.
+    </p>
+    <p>
+        In order to pull from the latest changes that someone had pushed in the repository, this can be done by a <b>git pull origin master</b>. Or if you would like
+        to clone a existing remote repository this can be done by <b<>git clone (repository url)</b>
+    </p>
+    <h2>
+        Commands on Git
+    </h2>
+    <p>
+        git add - to add folders or files (period to push all in directory) <br>
+        -m - means message <br>
+        git commit - commits what you made, saves the difference from the database <br>
+        init = Create the repository <br>
+        Git Add filename = add the file(s) to git in preparation for a commit <br>
+        Git commit -m “message”= do the commit to save changes <br>
+        Git checkout -b branch name = make a new branch and checkout <br>
+        Git checkout branch name = checkout branch <br>
+        Git merge BRANCHNAME = merge the branch Note: You have to be on the branch that you want to merge to <br><br><br><br><br><br><br><br><br><br>
+    </p>
+</div>
+{%endblock%}

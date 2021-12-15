@@ -4,8 +4,46 @@
     {{ super() }}
 {% endblock %}
 {%block content%}
-<div>
-    Hello this is the content
-    <a href="calculate">Calculate something!</a>
-</div>
+<header>
+    <div class="jumbotron text-center">
+        <h1>Learning the Basics</h1>
+        <p>Learning how to do the basics of Git, Github, and Docker</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Git</h2>
+                <p>What is Git?</p>
+                <p>Git is a software for tracking changes in any set of files,
+                    usually used for coordinating work among programmers collaboratively
+                    developing source code during software development.<br><br></p>
+                <p>To Learn More Click <a href="git">Here</a></p>
+                <img src="{{ url_for('static', filename = 'images/git_logo.png') }}" alt="Logo of Git" width="250" height="250" class="center">
+            </div>
+            <div class="col-sm-4">
+                <h2>Github</h2>
+                <p>What is Github?</p>
+                <p>GitHub. Inc. is a provider of internet hosting for software,
+                    development and version control using Git. It offers the distributed version
+                    control and source code management functionality og Git, plus its own features.<br><br></p>
+                <p>To Learn More Click <a href="github">Here</a></p>
+                <img src="{{ url_for('static', filename = 'images/github_logo.png') }}" alt="Logo of Github" width="250" height="250" class="center">
+            </div>
+            <div class="col-sm-4">
+                <h2>Docker</h2>
+                <p>What is docker?</p>
+                <p>
+                    Docker is a set of platform as a service products that use OS-level virtualization to deliver
+                    software in packages called containers. Containers are isolated from one another and bundle their own
+                    software , libraries and configuration file; they can communicate with each other through well-defined channels.<br><br>
+                </p>
+                <p>
+                    To Learn More Click <a href="docker">Here</a>
+                </p>
+                <img src="{{ url_for('static', filename = 'images/docker_logo.png') }}" alt="Logo of Docker" width="250" height="250" class="center">
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+</header>
 {%endblock%}

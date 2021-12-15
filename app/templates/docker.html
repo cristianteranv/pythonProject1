@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{%block content%}
+<h1>
+    Learning the Basics of Docker
+</h1>
+
+<h2>
+    What is Docker?
+</h2>
+
+<div class="center">
+    <p>
+        "Docker is an open source containerization platform. It enables developers to package application into containers-standardized executable
+        components combining application source code with the operating system (OS) libraries and dependencies required to run that code in any
+        environment. Containers simplify delivery of distributed applications, and have become increasingly popular as organizations shift to
+        cloud-native development and hybrid multicloud environment"
+        <a href="https://www.ibm.com/cloud/learn/docker">(ibm.com)</a>
+    </p>
+</div>
+
+<h2>
+    Getting Started
+</h2>
+<div class="center">
+    <p>
+        First for Windows, open Powershell as Administrator and run: <br>
+        dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart <br>
+        dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart <br>
+        and reboot the computer. After download
+        <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">this</a>.
+    </p>
+    <p>
+        Doing these steps are prerequisites for docker to be used.
+    </p>
+    <p>
+        For an in-depth of Docker and getting started with using it go <a href="https://docs.docker.com/get-started/">Here</a>.
+    </p>
+</div>
+<h2>
+    Commands for Docker
+</h2>
+<p>
+    <i>Containers commands</i><br><br>
+    <b> docker container my_command </b> <br>
+    create - creatre a container from an image <br>
+    start - start an existing container <br>
+    run - create a new container and start it <br>
+    ls - list running containers <br>
+    inspect - see lots of info about a container <br>
+    stop - gracefully stop running container <br>
+    kill - Stop main process in container abruptly <br>
+    rm - delete a stopped container <br><br>
+    <i>Images commands</i> <br><br>
+    <b> docker image my_command </b> <br>
+    build - build an image <br>
+    push - push an image to a remote registry <br>
+    ls - list images <br>
+    history - see intermediate image info <br>
+    inspect - see lots of info about an image, including the layers <br>
+    rm - delete an image
+    <br><br><br><br><br><br><br><br><br><br><br>
+</p>
+{%endblock%}

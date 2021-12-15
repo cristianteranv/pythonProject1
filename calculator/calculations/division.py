@@ -3,6 +3,10 @@ from calculator.calculations.calculation import Calculation
 
 class Division(Calculation):
     """ calculation addition class"""
+    def __init__(self, values):
+        self.operation = "Division"
+        self.values = Calculation.convert_args_to_tuple_of_float(values)
+
     def get_result(self):
         """get the addition results"""
         values = self.values

@@ -9,6 +9,10 @@ class Calculations:
     history = []
     # pylint: disable=too-few-public-methods
     @staticmethod
+    def get_history():
+        return Calculations.history
+
+    @staticmethod
     def clear_history():
         """clear the history of calculations"""
         Calculations.history.clear()

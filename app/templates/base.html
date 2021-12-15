@@ -6,6 +6,7 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
     {% block head %}
     <title>{% block title%}{% endblock %} - My Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
@@ -28,48 +29,42 @@
         <ul class="navbar-nav">
             <!-- Links -->
             <li class="nav-item">
-                <a class="nav-link" href="git.html">Git</a>
+                <a class="nav-link" href="git">Git</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="github.html">Github</a>
+                <a class="nav-link" href="github">Github</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="docker.html">Docker</a>
+                <a class="nav-link" href="docker">Docker</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="vi.html">Vi</a>
+                <a class="nav-link" href="vi">Vi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="linux.html">Linux Commands</a>
+                <a class="nav-link" href="linux">Linux Commands</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="glossary.html">OOP Glossary</a>
+                <a class="nav-link" href="glossary">OOP Glossary</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aaa.html">AAA Testing</a>
+                <a class="nav-link" href="aaa">AAA Testing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="principles.html">OOP Principles</a>
+                <a class="nav-link" href="principles">OOP Principles</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="solid.html">SOLID</a>
+                <a class="nav-link" href="solid">SOLID</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calculate">Calculator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="calculation_history">Calculator Records</a>
             </li>
         </ul>
     </div>
     </nav>
     <div class="container-fluid">
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-warning alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        {{message}}
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
         <div id="content">{% block content %}{% endblock %}</div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -81,7 +76,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
+    {% block scripts %}{% endblock %}
     <footer class="footer page-footer font-small ">
         {%block footer%}
         <div class="container">
